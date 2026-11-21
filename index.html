@@ -7,7 +7,7 @@
 <meta name="description" content="Hand embroidered sweaters made with love by a mama of three. Names, seasonal designs and florals, in sizes 3-6 months to adult XL.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Satisfy&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Birthstone+Bounce:wght@500&display=swap" rel="stylesheet">
 <style>
 :root{
   --rose:#eda2bf;
@@ -15,7 +15,7 @@
   --paper:#fff7fa;
   --ink:#121212;
   --muted:#4a4044;
-  --script:"Satisfy","Playlist Script",cursive;
+  --script:"Birthstone Bounce","Playlist Script",cursive;
   --sans:"DM Sans","Canva Sans",system-ui,sans-serif;
   /* thickens the thin line-art logo: darker lines plus a tight dark halo */
   --bold-logo:contrast(1.7) brightness(.8) drop-shadow(0 0 .6px #121212) drop-shadow(0 0 .6px #121212);
@@ -26,10 +26,10 @@ body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);f
 img{max-width:100%;display:block}
 a{color:inherit}
 .wrap{max-width:1100px;margin:0 auto;padding:0 20px}
-h1,h2,h3{font-family:var(--script);font-weight:400;line-height:1.15;margin:0 0 .4em}
-h1{font-size:clamp(2.6rem,7vw,4.4rem)}
-h2{font-size:clamp(2rem,5vw,3rem)}
-h3{font-size:1.5rem}
+h1,h2,h3{font-family:var(--script);font-weight:700;line-height:1.08;word-spacing:.14em;margin:0 0 .4em}
+h1{font-size:clamp(3.2rem,8.5vw,5.4rem)}
+h2{font-size:clamp(2.6rem,6.5vw,3.9rem)}
+h3{font-size:2rem}
 .eyebrow{font-weight:700;letter-spacing:.14em;text-transform:uppercase;font-size:.78rem;margin:0 0 .8rem}
 .btn{display:inline-block;background:var(--rose);color:var(--ink);font-weight:700;text-decoration:none;padding:.85em 1.6em;border-radius:999px;border:2px solid var(--ink);transition:background .2s,transform .2s}
 .btn:hover,.btn:focus-visible{background:var(--blush);transform:translateY(-2px)}
@@ -52,17 +52,17 @@ header{background:var(--paper);border-bottom:1px solid var(--rose);position:stic
 /* logo + headline read as one centered lockup */
 .hero .lockup{text-align:center}
 .hero .hero-logo{width:min(400px,92%);height:auto;margin:-30px auto -8px;mix-blend-mode:multiply;filter:var(--bold-logo)}
-.hero h1{font-size:clamp(2.1rem,4.4vw,3.2rem);margin-bottom:.5em}
+.hero h1{font-size:clamp(2.8rem,5.6vw,4.2rem);margin-bottom:.5em}
 .hero p.lead{font-size:1.2rem;max-width:34ch;margin:0 auto}
 .hero .actions{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;margin-top:26px}
 .hero figure{margin:0;position:relative}
 .hero figure img{border-radius:24px;border:6px solid var(--paper);box-shadow:0 18px 40px rgba(18,18,18,.18);aspect-ratio:3/4;object-fit:cover;width:100%}
-.hero figcaption{position:absolute;left:-14px;bottom:20px;background:var(--rose);border:2px solid var(--ink);border-radius:999px;padding:.35em 1.1em;font-family:var(--script);font-size:1.2rem}
+.hero figcaption{position:absolute;left:-14px;bottom:20px;background:var(--rose);border:2px solid var(--ink);border-radius:999px;padding:.35em 1.1em;font-family:var(--script);font-weight:700;font-size:1.7rem;word-spacing:.12em}
 
 /* facts */
 .facts{background:var(--rose)}
 .facts ul{list-style:none;margin:0;padding:18px 20px;display:grid;grid-template-columns:repeat(3,1fr);gap:16px;max-width:1100px;margin:0 auto;text-align:center}
-.facts strong{display:block;font-family:var(--script);font-size:1.5rem;font-weight:400}
+.facts strong{display:block;font-family:var(--sans);font-size:1.05rem;font-weight:700;letter-spacing:.02em}
 .facts span{font-size:.95rem}
 
 section{padding:72px 0}
@@ -74,15 +74,15 @@ section{padding:72px 0}
 .card{margin:0;background:#fff;border-radius:18px;overflow:hidden;border:2px solid var(--ink);box-shadow:6px 6px 0 var(--rose)}
 .card img{aspect-ratio:1/1;object-fit:cover;width:100%}
 .card figcaption{padding:14px 16px 16px}
-.card b{display:block;font-family:var(--script);font-weight:400;font-size:1.3rem;line-height:1.2}
+.card b{display:block;font-family:var(--sans);font-weight:700;font-size:1.05rem;line-height:1.3}
 .more{text-align:center;margin-top:44px}
 
 /* steps */
 .band{background:var(--blush)}
 .steps{list-style:none;counter-reset:s;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
 .steps li{counter-increment:s;background:var(--paper);border:2px solid var(--ink);border-radius:18px;padding:26px 20px}
-.steps li::before{content:counter(s);display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:var(--rose);border:2px solid var(--ink);font-family:var(--script);font-size:1.4rem;margin-bottom:12px}
-.steps h3{font-size:1.35rem}
+.steps li::before{content:counter(s);display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:var(--rose);border:2px solid var(--ink);font-family:var(--script);font-weight:700;font-size:1.9rem;margin-bottom:12px}
+.steps h3{font-size:1.9rem}
 .steps p{margin:0;font-size:.97rem}
 .note{margin:34px auto 0;max-width:60ch;text-align:center;font-size:.98rem}
 
@@ -90,7 +90,7 @@ section{padding:72px 0}
 .about .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:center}
 .about img{border-radius:50% 50% 24px 24px / 38% 38% 24px 24px;border:6px solid var(--blush);aspect-ratio:4/5;object-fit:cover;width:100%;max-width:420px;margin:0 auto;box-shadow:0 18px 40px rgba(18,18,18,.15)}
 .about p{max-width:52ch}
-.sign{font-family:var(--script);font-size:1.7rem;margin-top:10px}
+.sign{font-family:var(--script);font-weight:700;font-size:2.6rem;margin-top:10px}
 
 /* cta + footer */
 .cta{background:var(--rose);text-align:center}
@@ -236,7 +236,7 @@ footer a{color:var(--blush)}
     <img src="images/kayleigh.jpg" loading="lazy" alt="Kayleigh, the maker behind Bella Rose Embroidery">
     <div>
       <p class="eyebrow">Meet the maker</p>
-      <h2>Hi, I'm Kayleigh</h2>
+      <h2>Meet Kayleigh</h2>
       <p>I'm a Jesus-loving, homesteading wife and mama of three, and I've been married for over a decade. We live in a very rural community in British Columbia with a cat, dogs, chickens and turkeys, and maybe goats soon.</p>
       <p>I love embroidering and making special gifts for people, and that is how this little business all got started. Every sweater is made by hand, with love, the same way I'd make one for my own kids.</p>
       <p class="sign">Kayleigh</p>
