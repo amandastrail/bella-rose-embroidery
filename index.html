@@ -40,7 +40,7 @@ h3{font-size:1.5rem}
 /* nav */
 header{background:var(--paper);border-bottom:1px solid var(--rose);position:sticky;top:0;z-index:10}
 .nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:10px 20px;max-width:1100px;margin:0 auto}
-.nav img{height:92px;width:auto;margin:-14px 0;mix-blend-mode:multiply;filter:var(--bold-logo)}
+.nav img{height:92px;width:auto;margin:-14px 0;mix-blend-mode:multiply}
 .nav nav{display:flex;gap:22px;align-items:center;flex-wrap:wrap;justify-content:flex-end}
 .nav nav a{text-decoration:none;font-weight:500}
 .nav nav a:hover{text-decoration:underline;text-decoration-color:var(--rose);text-decoration-thickness:3px;text-underline-offset:5px}
@@ -49,9 +49,12 @@ header{background:var(--paper);border-bottom:1px solid var(--rose);position:stic
 /* hero */
 .hero{background:var(--blush);padding:56px 0 64px}
 .hero .wrap{display:grid;grid-template-columns:1.05fr 1fr;gap:48px;align-items:center}
-.hero .hero-logo{width:min(380px,85%);height:auto;margin:-24px 0 -8px -18px;mix-blend-mode:multiply;filter:var(--bold-logo)}
-.hero p.lead{font-size:1.2rem;max-width:34ch}
-.hero .actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:26px}
+/* logo + headline read as one centered lockup */
+.hero .lockup{text-align:center}
+.hero .hero-logo{width:min(400px,92%);height:auto;margin:-30px auto -8px;mix-blend-mode:multiply;filter:var(--bold-logo)}
+.hero h1{font-size:clamp(2.1rem,4.4vw,3.2rem);margin-bottom:.5em}
+.hero p.lead{font-size:1.2rem;max-width:34ch;margin:0 auto}
+.hero .actions{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;margin-top:26px}
 .hero figure{margin:0;position:relative}
 .hero figure img{border-radius:24px;border:6px solid var(--paper);box-shadow:0 18px 40px rgba(18,18,18,.18);aspect-ratio:3/4;object-fit:cover;width:100%}
 .hero figcaption{position:absolute;left:-14px;bottom:20px;background:var(--rose);border:2px solid var(--ink);border-radius:999px;padding:.35em 1.1em;font-family:var(--script);font-size:1.2rem}
@@ -72,7 +75,6 @@ section{padding:72px 0}
 .card img{aspect-ratio:1/1;object-fit:cover;width:100%}
 .card figcaption{padding:14px 16px 16px}
 .card b{display:block;font-family:var(--script);font-weight:400;font-size:1.3rem;line-height:1.2}
-.card span{font-size:.92rem;color:var(--muted)}
 .more{text-align:center;margin-top:44px}
 
 /* steps */
@@ -104,8 +106,7 @@ footer a{color:var(--blush)}
   .hero{padding:40px 0 48px}
   .hero figure{max-width:440px;margin:0 auto}
   .hero figcaption{left:8px}
-  .hero .hero-logo{width:min(300px,80%);margin:-16px auto -4px;}
-  .hero .wrap>div{text-align:left}
+  .hero .hero-logo{width:min(320px,86%);margin:-20px auto -6px}
   .grid{grid-template-columns:repeat(2,1fr)}
   .steps{grid-template-columns:repeat(2,1fr)}
   .nav nav a:not(.btn){display:none}
@@ -136,10 +137,9 @@ footer a{color:var(--blush)}
 
 <div class="hero">
   <div class="wrap">
-    <div>
+    <div class="lockup">
       <img class="hero-logo" src="images/logo-white.png" alt="Bella Rose Embroidery logo">
-      <p class="eyebrow">Hand embroidered sweaters</p>
-      <h1>Stitched with love, one sweater at a time.</h1>
+      <h1>Stitched with love,<br> one sweater at a time.</h1>
       <p class="lead">Names, seasonal designs and wildflowers, embroidered by hand for your little ones and the grown-ups too.</p>
       <div class="actions">
         <a class="btn" href="https://www.etsy.com/ca/shop/BREmbroiders" target="_blank" rel="noopener">Shop on Etsy</a>
@@ -171,27 +171,27 @@ footer a{color:var(--blush)}
     <div class="grid">
       <figure class="card">
         <img src="images/my-first-christmas.jpg" loading="lazy" alt="Red knit baby sweater embroidered with My First Christmas in white">
-        <figcaption><b>My First Christmas</b><span>A keepsake for baby's first holiday</span></figcaption>
+        <figcaption><b>My First Christmas</b></figcaption>
       </figure>
       <figure class="card">
         <img src="images/wildflower-bee.jpg" loading="lazy" alt="Cream knit sweater with embroidered sunflower, daisy, lavender and a bee">
-        <figcaption><b>Wildflowers and Bee</b><span>Sunflower, daisy and a busy bee</span></figcaption>
+        <figcaption><b>Wildflowers and Bee</b></figcaption>
       </figure>
       <figure class="card">
         <img src="images/oh-come-let-us-adore.jpg" loading="lazy" alt="Dark green sweater embroidered with Oh come let us adore Him shaped like a Christmas tree with a gold star">
-        <figcaption><b>Oh Come Let Us Adore Him</b><span>Lettering shaped like a tree</span></figcaption>
+        <figcaption><b>Oh Come Let Us Adore Him</b></figcaption>
       </figure>
       <figure class="card">
         <img src="images/highland-cow-santa.jpg" loading="lazy" alt="Pink knit sweater with an embroidered highland cow wearing a Santa hat">
-        <figcaption><b>Highland Cow Santa</b><span>A cozy farm favourite</span></figcaption>
+        <figcaption><b>Highland Cow Santa</b></figcaption>
       </figure>
       <figure class="card">
         <img src="images/mushroom-heart.jpg" loading="lazy" alt="Green knit sweater with a heart of embroidered mushrooms, leaves and little bears">
-        <figcaption><b>Mushroom Heart</b><span>Toadstools, leaves and bears</span></figcaption>
+        <figcaption><b>Mushroom Heart</b></figcaption>
       </figure>
       <figure class="card">
         <img src="images/dinosaur.jpg" loading="lazy" alt="Brown knit sweater with a cream embroidered dinosaur outline">
-        <figcaption><b>Little Dino</b><span>Simple chain stitch outline</span></figcaption>
+        <figcaption><b>Little Dino</b></figcaption>
       </figure>
     </div>
     <div class="more">
