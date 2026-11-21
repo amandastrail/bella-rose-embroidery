@@ -101,22 +101,36 @@ footer{background:var(--ink);color:#fff;padding:36px 0;text-align:center;font-si
 footer img{height:90px;width:90px;margin:0 auto 14px;border-radius:50%}
 footer a{color:var(--blush)}
 
+/* feature sections: photo beside text */
+.feature .wrap{display:grid;grid-template-columns:1.05fr 1fr;gap:56px;align-items:center}
+.feature.rev .media{order:2}
+.feature .media{display:grid;gap:20px}
+.feature .media img{width:100%;border-radius:20px;border:2px solid var(--ink);box-shadow:8px 8px 0 var(--rose);object-fit:cover}
+.feature .media img.tall{aspect-ratio:1/1}
+#colours .media img.tall{aspect-ratio:16/10}
+.feature .media img:not(.tall){aspect-ratio:2/1}
+.feature.band .media img{box-shadow:8px 8px 0 var(--paper)}
+.feature .text p{max-width:46ch}
+.feature .text .btn{margin-top:12px}
+
 /* botanical line art in the background, echoing the logo's roses and leaves */
 .hero,#work,#how,.about,.cta{position:relative;overflow:hidden}
 .hero>.wrap,#work>.wrap,#how>.wrap,.about>.wrap,.cta>.wrap{position:relative;z-index:1}
-.hero::before,.hero::after,#work::before,#work::after,#how::before,.about::after,.cta::before,.cta::after{content:"";position:absolute;z-index:0;pointer-events:none;width:340px;aspect-ratio:400/330;background:no-repeat center/contain;opacity:.2}
-.hero::before{background-image:url(images/spray-a.svg);left:-100px;bottom:-90px}
-.hero::after{background-image:url(images/spray-b.svg);right:-70px;top:-20px;transform:scaleX(-1)}
+.hero::before,#work::before,#work::after,#how::before,.about::after,.cta::before,.cta::after{content:"";position:absolute;z-index:0;pointer-events:none;width:340px;aspect-ratio:400/330;background:no-repeat center/contain;opacity:.2}
+.hero::before{background-image:url(images/spray-c.svg);left:-130px;bottom:-45px;width:300px}
 #work::before{background-image:url(images/spray-b.svg);left:-70px;top:-10px}
 #work::after{background-image:url(images/spray-a.svg);right:-70px;bottom:-30px;transform:scaleX(-1)}
-#how::before{background-image:url(images/spray-b.svg);right:-60px;top:-20px;transform:scaleX(-1)}
-.about::after{background-image:url(images/spray-a.svg);right:-50px;bottom:-30px;width:300px;transform:scaleX(-1);opacity:.16}
+#how::before{background-image:url(images/spray-b.svg);right:-60px;top:-55px;transform:scaleX(-1)}
+.about::after{background-image:url(images/spray-a.svg);right:-30px;bottom:-5px;width:300px;transform:scaleX(-1);opacity:.16}
 .cta::before{background-image:url(images/spray-a.svg);left:-60px;bottom:-30px}
 .cta::after{background-image:url(images/spray-b.svg);right:-70px;top:-20px;transform:scaleX(-1)}
 
 @media(max-width:860px){
-  .hero::before,.hero::after,#work::before,#work::after,#how::before,.about::after,.cta::before,.cta::after{width:200px;opacity:.16}
-  .hero .wrap,.about .wrap{grid-template-columns:1fr}
+  .hero::before,#work::before,#work::after,#how::before{display:none}
+  .about::after,.cta::before,.cta::after{width:200px;opacity:.16}
+  .hero .wrap,.about .wrap,.feature .wrap{grid-template-columns:1fr}
+  .feature.rev .media{order:0}
+  .feature .wrap{gap:36px}
   .hero{padding:40px 0 48px}
   .hero figure{max-width:440px;margin:0 auto}
   .hero figcaption{left:8px}
@@ -210,6 +224,37 @@ footer a{color:var(--blush)}
     </div>
     <div class="more">
       <a class="btn" href="https://www.etsy.com/ca/shop/BREmbroiders" target="_blank" rel="noopener">See everything on Etsy</a>
+    </div>
+  </div>
+</section>
+
+<section id="colours" class="band feature">
+  <div class="wrap">
+    <div class="media">
+      <img src="images/yarn-colours.jpg" loading="lazy" alt="Rows of yarn skeins in blue, pink, lilac, coral, mustard, cream, mauve, plum, sage and brown">
+      <img class="tall" src="images/sweater-stack.jpg" loading="lazy" alt="A folded stack of knit sweaters in teal, peach, brown, cream and white with embroidered flowers">
+    </div>
+    <div class="text">
+      <p class="eyebrow">Colours and yarn</p>
+      <h2>Pick your palette</h2>
+      <p>Every sweater starts with a colour you love. Soft peach, teal, mocha, cream and more, stitched with a wide range of yarn shades so your piece feels like yours.</p>
+      <p>Not sure what goes together? Send me a message and I will help you choose.</p>
+      <a class="btn" href="https://www.etsy.com/ca/shop/BREmbroiders" target="_blank" rel="noopener">Browse colours on Etsy</a>
+    </div>
+  </div>
+</section>
+
+<section id="beanies" class="feature rev">
+  <div class="wrap">
+    <div class="media">
+      <img class="tall" src="images/floral-beanies.jpg" loading="lazy" alt="Two knit beanies, grey and black, with hand embroidered roses, daisies and sunflowers around the patch">
+    </div>
+    <div class="text">
+      <p class="eyebrow">Beyond sweaters</p>
+      <h2>Beanies too</h2>
+      <p>Little flowers look just as sweet on a cozy beanie. Roses, daisies and sunflowers, hand stitched around the patch.</p>
+      <p>Ask about beanies and other custom pieces on Etsy or Instagram.</p>
+      <a class="btn ghost" href="https://www.instagram.com/bellaroseembroidery" target="_blank" rel="noopener">Message on Instagram</a>
     </div>
   </div>
 </section>
